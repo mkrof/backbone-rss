@@ -1,0 +1,67 @@
+pad = 5px
+topPad = 40px
+listWidth = 325px
+filtersWidth = 100px
+gray1 = #CCC
+gray2 = #DEDEDE
+gray3 = #F5F5F5
+titleFontSize = 18px
+
+body
+    padding-top: topPad
+
+.navbar-inner
+    border-radius: 0
+    -webkit-border-radius: 0
+    .brand
+        padding-left: 25px
+    
+.left-pane
+    position: absolute
+    top: topPad
+    bottom: 0
+    left: 0
+    width: filtersWidth
+    background: gray1
+    padding-left: pad
+
+.post-list
+    position: absolute
+    top: topPad
+    bottom: 0
+    left: filtersWidth + pad
+    width: listWidth
+    overflow: scroll
+    list-style-type: none
+    padding: 0 
+    border-right: 1px solid gray2
+    outline: none
+    h3
+        font-size: titleFontSize
+        line-height: titleFontSize
+        margin: pad 0
+    li
+        border-bottom: 1px solid gray1
+        padding: 20px pad
+        cursor: pointer
+        &.selected, &.selected:hover
+            background: orange
+        &:hover
+            background: gray3
+
+.right-pane
+    position: absolute
+    left: filtersWidth + listWidth + pad
+    top: topPad
+    bottom: 0
+    right: 0
+    overflow: scroll
+    padding: 0 20px
+    background: #F5F5F5
+    h3
+        line-height: 24px
+    .description
+        padding: 2 * pad 0
+        margin-bottom: 1em
+
+    
