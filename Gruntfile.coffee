@@ -45,6 +45,13 @@ module.exports = (grunt) ->
                 dest: CSS_DIST
 
         clean: ['dist']
+
+        connect:
+            server:
+                options:
+                    keepalive: true
+                    port: 8888
+                    base: 'dist'
             
         copy:
             api:
@@ -96,6 +103,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks task for task in [
         'grunt-contrib-clean'
         'grunt-contrib-concat'
+        'grunt-contrib-connect'
         'grunt-contrib-copy'
         'grunt-contrib-jshint'
         'grunt-contrib-stylus'
