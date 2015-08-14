@@ -121,4 +121,6 @@ module.exports = (grunt) ->
     grunt.renameTask 'watch', 'delta'
     grunt.registerTask 'watch', ['build', 'delta']
 
+    grunt.registerTask 'server', ['build', 'connect']
+
     grunt.registerTask 'default', ['build']
